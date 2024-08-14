@@ -2,7 +2,7 @@ package com.ivoyant.java;
 
 import java.util.Scanner;
 
-public class SwitchStmt {
+public class SwitchStmtDemo {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int day =sc.nextInt();
