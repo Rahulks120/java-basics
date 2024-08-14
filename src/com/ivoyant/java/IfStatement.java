@@ -2,7 +2,7 @@ package com.ivoyant.java;
 
 import java.util.Scanner;
 
-public class IfStmt {
+public class IfStatement {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int val =sc.nextInt();
