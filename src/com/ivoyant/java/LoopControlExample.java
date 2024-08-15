@@ -1,3 +1,5 @@
+package com.ivoyant.java;
+
 public class LoopControlExample {
 
     public static void main(String[] args) {
