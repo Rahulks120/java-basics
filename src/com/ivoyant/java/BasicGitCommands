@@ -1,0 +1,47 @@
+1. Setup and Configuration:
+    git init: Initializes a new Git repository in the current directory.
+    git clone <repository-url>: Clones a repository from the remote URL to your local machine.
+    git config --global user.name "Your Name": Sets your global username for Git.
+    git config --global user.email "your.email@example.com": Sets your global email for Git.
+2. Working with Branches:
+    git branch: Lists all local branches.
+    git branch <branch-name>: Creates a new branch.
+    git checkout <branch-name>: Switches to the specified branch.
+    git checkout -b <branch-name>: Creates a new branch and switches to it.
+    git merge <branch-name>: Merges the specified branch into the current branch.
+    git branch -d <branch-name>: Deletes the specified branch locally.
+    git push origin --delete <branch-name>: Deletes the specified branch from the remote repository.
+3. Staging and Committing Changes:
+    git status: Displays the state of the working directory and staging area.
+    git add <file>: Stages a specific file.
+    git add .: Stages all changes in the current directory.
+    git commit -m "commit message": Commits the staged changes with a message.
+    git commit -a -m "commit message": Commits all changes, including those not staged, with a message.
+4. Viewing and Navigating History:
+    git log: Shows the commit history.
+    git log --oneline: Displays a compact, one-line-per-commit view of the history.
+    git show <commit-hash>: Shows details about a specific commit.
+    git diff: Shows changes between working directory and the last commit.
+    git diff <branch-name>: Shows differences between the current branch and the specified branch.
+5. Syncing with Remote Repositories:
+    git remote add origin <repository-url>: Adds a new remote repository.
+    git remote -v: Lists all remote repositories.
+    git pull origin <branch-name>: Fetches and merges changes from the remote branch into the current branch.
+    git push origin <branch-name>: Pushes changes from the local branch to the remote repository.
+6. Undoing Changes:
+    git reset <file>: Unstages a file that was previously added.
+    git reset --hard <commit-hash>: Resets the working directory and index to match a specific commit, discarding all changes since that commit.
+    git revert <commit-hash>: Creates a new commit that undoes the changes of a previous commit.
+7. Tagging:
+    git tag <tag-name>: Creates a new tag pointing to the current commit.
+    git push origin <tag-name>: Pushes a tag to the remote repository.
+    git tag -d <tag-name>: Deletes a local tag.
+    git push origin --delete <tag-name>: Deletes a tag from the remote repository.
+8. Working with Stashes:
+    git stash: Saves your uncommitted changes and clears the working directory.
+    git stash list: Lists all stashes.
+    git stash apply: Applies the latest stash to the working directory.
+    git stash drop: Deletes the most recent stash.
+    git stash pop: Applies and then removes the latest stash from the stash list.
+9. Collaboration:
+    git fork: Creates a copy of a repository on your GitHub account (this is done on the GitHub website, not via the command line).
