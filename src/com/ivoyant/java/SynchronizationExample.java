@@ -11,6 +11,7 @@ class BankAccount {
     }
 
     public int getBalance() {
+
         return balance;
     }
 }
@@ -26,6 +27,7 @@ class DepositThread extends Thread {
 
     @Override
     public void run() {
+
         account.deposit(amount);
     }
 }
