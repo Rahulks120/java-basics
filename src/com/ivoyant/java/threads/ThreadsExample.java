@@ -1,39 +1,24 @@
 package com.ivoyant.java.threads;
 
-class A extends Thread{
-    public void run()
-    {
-        for (int i=0;i<5;i++){
-            System.out.println("Thread A is running...");
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + " - Count: " + i);
             try {
-                Thread.sleep(10);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                System.out.println("Thread interrupted: " + e.getMessage());
             }
         }
-
-    }
-}
-class B extends Thread{
-    public void run()
-    {
-        for (int i=0;i<5;i++){
-            System.out.println("Thread B is running...");
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
     }
 }
 public class ThreadsExample {
     public static void main(String[] args) {
-        A obj1= new A();
-        B obj2 = new B();
-        obj1.start();
-        obj2.start();
+        MyThread thread1 = new MyThread();
+        MyThread thread2 = new MyThread();
 
+        thread1.start();
+        thread2.start();
     }
 }

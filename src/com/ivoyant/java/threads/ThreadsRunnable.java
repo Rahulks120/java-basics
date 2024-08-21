@@ -1,30 +1,40 @@
 package com.ivoyant.java.threads;
 
-class C implements Runnable{
+class EmailSender implements Runnable{
     public void run(){
         for (int i=0;i<5;i++)
         {
-            System.out.println("Thread C is running...");
+            System.out.println("EmailSender thread is sending an email...");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted: " + e.getMessage());
+            }
         }
     }
 
 }
-class D implements Runnable{
+class ReportGenerator implements Runnable{
     public void run(){
         for (int i=0;i<5;i++)
         {
-            System.out.println("Thread D is running...");
+            System.out.println("ReportGenerator thread is generating a report...");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted: " + e.getMessage());
+            }
         }
     }
 
 }
 public class ThreadsRunnable {
     public static void main(String[] args) {
-        C obj1 = new C();
-        D obj2 = new D();
+        EmailSender emailSender= new EmailSender();
+        ReportGenerator reportGenerator = new ReportGenerator();
 
-        Thread t1= new Thread(obj1);
-        Thread t2=new Thread(obj2);
+        Thread t1= new Thread(emailSender );
+        Thread t2=new Thread(reportGenerator);
         t1.start();
         t2.start();
 
